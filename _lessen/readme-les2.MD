@@ -1,4 +1,4 @@
-# Pyhton Flash
+# Python Flash
 
 ## Beautiful Soup
 

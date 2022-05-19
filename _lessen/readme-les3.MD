@@ -158,3 +158,20 @@ for vacature in vacatureList:
     db = database("database.sqlite")
     db.insertVacature(vacature['title'], vacature['bedrijf'], vacature['link'])
 ```
+
+15. Voeg een method toe aan de db class om de output van een enkele tablen te tonen in de console
+
+
+bestand: `db.py` 
+```python
+    def showTable(Self):
+        result = Self.conn.execute("SELECT * FROM vacature")
+        Self.conn.commit()
+        for row in result:
+            print(row)
+```
+16. We kunnen deze nu toevoegen aan de `scraper.py` aan het einde om te checken of alles goed is opgeslagen in de database.
+
+```python
+db.showTable()
+```
