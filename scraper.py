@@ -27,13 +27,14 @@ for vacature in vacatureList:
     html = request.text
     soup = BeautifulSoup(html, 'html.parser')
     companyDetails = soup.find(class_="c-detail-company")
+    #test
     i += 1
 
-for vacature in vacatureList:
-    db = database("database.sqlite")
-    db.insertVacature(vacature['title'], vacature['bedrijf'], vacature['link'])
+#for vacature in vacatureList:
+   # db = database("database.sqlite")
+   # db.insertVacature(vacature['title'], vacature['bedrijf'], vacature['link'])
 
-db.showTable()
+#db.showTable()
 
 # print("complete") #scrape complete
 # print(json.dumps(vacatureList))
